@@ -22,7 +22,7 @@ terraform {
   backend "s3" {
     bucket         = "terraform-state-202208"
     key            = "eks-bp-demo/state.tfstate"
-    region         = "us-east-1"
+    region         = "us-west-2"
     dynamodb_table = "terraform-state-lock"
   }
 
@@ -30,7 +30,7 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "us-east-1"
+  region = "us-west-2"
 }
 
 provider "kubernetes" {

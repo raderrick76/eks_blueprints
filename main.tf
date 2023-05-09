@@ -19,7 +19,7 @@ module "eks_blueprints" {
   managed_node_groups = {
     mg_m5 = {
       node_group_name = "managed-ondemand"
-      instance_types  = ["m5.large"]
+      instance_types  = ["t2.micro"]
       min_size        = 2
       max_size        = 4
       subnet_ids      = module.vpc.private_subnets
@@ -86,7 +86,7 @@ module "eks_blueprints_kubernetes_addons" {
   enable_amazon_eks_aws_ebs_csi_driver = true
   #endregion
 
-  #region K8s ADDONS
+  #region K8s ADDONS used for CONTINUOUS DELIVERY
   enable_argocd = true
 
   argocd_helm_config = {

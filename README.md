@@ -13,7 +13,7 @@ terraform apply --var-file inputs.tfvars
 ### Access CLuster
 Run update-kubeconfig command:
 ```
-aws eks --region us-east-1 update-kubeconfig --name eks-bp-demo
+aws eks --region us-west-2 update-kubeconfig --name eks-bp-demo
 ```
 
 ## Live Demo
@@ -27,7 +27,7 @@ kubectl port-forward svc/argo-cd-argocd-server 8080:443 -n argocd
 
 Get the Argo Admin password form secrets manager
 ```
-aws secretsmanager get-secret-value --secret-id argocd --region us-east-1
+aws secretsmanager get-secret-value --secret-id argocd --region us-west-2
 ```
 
 
