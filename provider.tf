@@ -1,5 +1,5 @@
 terraform {
-  required_version = "=1.2.9"
+  required_version = "=1.4.6"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -63,6 +63,6 @@ data "aws_caller_identity" "current" {}
 data "aws_region" "current" {}
 
 data "aws_acm_certificate" "issued" {
-  domain   = "lkravi.me"
+  domain   = "raderrick76.me"
   statuses = ["ISSUED"]
 }
